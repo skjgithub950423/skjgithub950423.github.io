@@ -84,18 +84,18 @@
 
 
 
-<meta name="description" content="一些废话为什么要写这篇文章呢，因为最近公司的项目需要，并行开发了一系列的项目，而项目的主要功能基本相同，只是内容稍有不同，并且每个项目的进度也是不同的，常常是一个功能在其中一个项目上线了，过一段时间其他项目才会跟进，这时候就出现一个问题，如何能快速的同步项目代码呢 项目复制最开始想到的方法就是新建一个空的仓库，把现有项目的文件复制到新的仓库中，然后上传，但是感觉很麻烦，因为要区分哪些文件不需要（.">
+<meta name="description" content="前提上一篇文章介绍了如何复制一个项目到新的工程，但是上期说过每个项目的进度是不同的，A项目添加了一个功能、这个功能B项目也需要，B项目就是我们之前从A项目复制过去的，并进行了一些修改，这是我们要怎么办？打开两个编辑器对照代码，看哪里改了复制粘贴？强大的git依然能帮我们解决 项目合并1.cloneA项目到本地 12git clone git@github.com:username/A.gitcd">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git项目复制">
-<meta property="og:url" content="http://yoursite.com/2018/11/20/git并行开发项目/index.html">
+<meta property="og:title" content="git项目合并">
+<meta property="og:url" content="http://yoursite.com/2018/11/20/git并行开发项目_下/index.html">
 <meta property="og:site_name" content="Song-FE">
-<meta property="og:description" content="一些废话为什么要写这篇文章呢，因为最近公司的项目需要，并行开发了一系列的项目，而项目的主要功能基本相同，只是内容稍有不同，并且每个项目的进度也是不同的，常常是一个功能在其中一个项目上线了，过一段时间其他项目才会跟进，这时候就出现一个问题，如何能快速的同步项目代码呢 项目复制最开始想到的方法就是新建一个空的仓库，把现有项目的文件复制到新的仓库中，然后上传，但是感觉很麻烦，因为要区分哪些文件不需要（.">
+<meta property="og:description" content="前提上一篇文章介绍了如何复制一个项目到新的工程，但是上期说过每个项目的进度是不同的，A项目添加了一个功能、这个功能B项目也需要，B项目就是我们之前从A项目复制过去的，并进行了一些修改，这是我们要怎么办？打开两个编辑器对照代码，看哪里改了复制粘贴？强大的git依然能帮我们解决 项目合并1.cloneA项目到本地 12git clone git@github.com:username/A.gitcd">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-20T03:14:15.101Z">
+<meta property="og:updated_time" content="2018-11-20T05:46:20.401Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git项目复制">
-<meta name="twitter:description" content="一些废话为什么要写这篇文章呢，因为最近公司的项目需要，并行开发了一系列的项目，而项目的主要功能基本相同，只是内容稍有不同，并且每个项目的进度也是不同的，常常是一个功能在其中一个项目上线了，过一段时间其他项目才会跟进，这时候就出现一个问题，如何能快速的同步项目代码呢 项目复制最开始想到的方法就是新建一个空的仓库，把现有项目的文件复制到新的仓库中，然后上传，但是感觉很麻烦，因为要区分哪些文件不需要（.">
+<meta name="twitter:title" content="git项目合并">
+<meta name="twitter:description" content="前提上一篇文章介绍了如何复制一个项目到新的工程，但是上期说过每个项目的进度是不同的，A项目添加了一个功能、这个功能B项目也需要，B项目就是我们之前从A项目复制过去的，并进行了一些修改，这是我们要怎么办？打开两个编辑器对照代码，看哪里改了复制粘贴？强大的git依然能帮我们解决 项目合并1.cloneA项目到本地 12git clone git@github.com:username/A.gitcd">
 
 
 
@@ -116,9 +116,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/20/git并行开发项目/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/20/git并行开发项目_下/">
 
-  <title> git项目复制 | Song-FE </title>
+  <title> git项目合并 | Song-FE </title>
 </head>
 
 <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -238,7 +238,7 @@
             
             
               
-                git项目复制
+                git项目合并
               
             
           </h1>
@@ -261,8 +261,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2018/11/20/git并行开发项目/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/11/20/git并行开发项目/" itemprop="commentsCount"></span>
+                <a href="/2018/11/20/git并行开发项目_下/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/11/20/git并行开发项目_下/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -285,21 +285,24 @@
       
 
       
-        <h2 id="一些废话"><a href="#一些废话" class="headerlink" title="一些废话"></a>一些废话</h2><p>为什么要写这篇文章呢，因为最近公司的项目需要，并行开发了一系列的项目，而项目的主要功能基本相同，只是内容稍有不同，并且每个项目的进度也是不同的，常常是一个功能在其中一个项目上线了，过一段时间其他项目才会跟进，这时候就出现一个问题，如何能快速的同步项目代码呢</p>
-<h3 id="项目复制"><a href="#项目复制" class="headerlink" title="项目复制"></a>项目复制</h3><p>最开始想到的方法就是新建一个空的仓库，把现有项目的文件复制到新的仓库中，然后上传，但是感觉很麻烦，因为要区分哪些文件不需要（.git、node_modules等），哪些文件需要(主要项目代码)，一不小心就容易出错，其实只需要很简单的几条命令就可以了</p>
-<p>1.从需要被克隆的项目克隆一份裸版本库(随便进入一个你想存放新项目的根目录)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --bare git://github.com/username/project.git</span><br></pre></td></tr></table></figure>
+        <h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><p>上一篇文章介绍了如何复制一个项目到新的工程，但是上期说过每个项目的进度是不同的，A项目添加了一个功能、这个功能B项目也需要，B项目就是我们之前从A项目复制过去的，并进行了一些修改，这是我们要怎么办？打开两个编辑器对照代码，看哪里改了复制粘贴？强大的git依然能帮我们解决</p>
+<h3 id="项目合并"><a href="#项目合并" class="headerlink" title="项目合并"></a>项目合并</h3><p>1.cloneA项目到本地</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:username/A.git</span><br><span class="line"><span class="built_in">cd</span> A</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<p>–bare 创建的克隆版本库都不包含工作区，直接就是版本库的内容，这样的版本库称为裸版本库。<br>执行完毕后你会发现根目录下多了一个project.git 文件夹</p>
-<p>2.到git服务器新建一个空仓库,名字是newProject</p>
-<p>3.以镜像推送的方式上传代码到新仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> project.git</span><br><span class="line">git push --mirror git@github.com:username/newProject.git</span><br></pre></td></tr></table></figure>
-<p>– mirror 克隆出来的裸版本对上游版本库进行了注册，这样可以在裸版本库中使用git fetch命令和上游版本库进行持续同步（也就是原有项目的提交记录也会保存）</p>
-<p>4.删除无用代码</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line">rm -rf project.git</span><br></pre></td></tr></table></figure>
-<p>5.clone项目代码到本地进行开发</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:username/newProject.git</span><br></pre></td></tr></table></figure>
-<p>这种方式可以保留原版本库中的所有内容</p>
+<p>2.将新项目添加到旧项目</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add B https://github.com/username/B.git</span><br></pre></td></tr></table></figure>
+<p>/*/ 验证是否添加成功<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure></p>
+<p>出现类似如下代码则代表添加成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">B       https://github.com/username/B.git (fetch)</span><br><span class="line">B       https://github.com/username/B.git (push)</span><br><span class="line">origin  git@github.com:username/A.git (fetch)</span><br><span class="line">origin  git@github.com:username/A.git (push)</span><br></pre></td></tr></table></figure>
+<p>3.拉取并合并项目代码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git fetch B</span><br><span class="line">git merge B/master</span><br></pre></td></tr></table></figure>
+<p>如果报错：fatal: refusing to merge unrelated histories<br>此错误出现在2.9.0版本后，在命令后添加执行参数–allow-unrelated-histories即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge B/master --allow-unrelated-histories</span><br></pre></td></tr></table></figure>
+<p>解决冲突后添加一些merge信息就成功啦</p>
+<h3 id="备注（fetch和pull的区别）"><a href="#备注（fetch和pull的区别）" class="headerlink" title="备注（fetch和pull的区别）"></a>备注（fetch和pull的区别）</h3><p>git pull相比git fetch相当于是从远程获取最新版本到本地，但不会自动merge。如果需要有选择的合并git fetch是更好的选择。效果相同时git pull将更为快捷。</p>
+<p>用法示例</p>
+<p>git fetch:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin master:tmp </span><br><span class="line">//在本地新建一个temp分支，并将远程origin仓库的master分支代码下载到本地temp分支</span><br><span class="line">git diff tmp </span><br><span class="line">//来比较本地代码与刚刚从远程下载下来的代码的区别</span><br><span class="line">git merge tmp</span><br><span class="line">//合并temp分支到本地的master分支</span><br></pre></td></tr></table></figure></p>
+<p>git pull:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</span><br><span class="line">//取回远程主机某个分支的更新，再与本地的指定分支合并。</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -331,8 +334,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/24/有关声明的一些小问题/" rel="next" title="有关声明的一些小问题">
-                <i class="fa fa-chevron-left"></i> 有关声明的一些小问题
+              <a href="/2018/11/18/git并行开发项目_上/" rel="next" title="git项目复制">
+                <i class="fa fa-chevron-left"></i> git项目复制
               </a>
             
           </div>
@@ -363,7 +366,7 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2018/11/20/git并行开发项目/" data-title="git项目复制" data-url="http://yoursite.com/2018/11/20/git并行开发项目/">
+      <div class="ds-thread" data-thread-key="2018/11/20/git并行开发项目_下/" data-title="git项目合并" data-url="http://yoursite.com/2018/11/20/git并行开发项目_下/">
       </div>
     
   </div>
@@ -406,7 +409,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -445,7 +448,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一些废话"><span class="nav-number">1.</span> <span class="nav-text">一些废话</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目复制"><span class="nav-number">1.1.</span> <span class="nav-text">项目复制</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前提"><span class="nav-number">1.</span> <span class="nav-text">前提</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目合并"><span class="nav-number">1.1.</span> <span class="nav-text">项目合并</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#备注（fetch和pull的区别）"><span class="nav-number">1.2.</span> <span class="nav-text">备注（fetch和pull的区别）</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
