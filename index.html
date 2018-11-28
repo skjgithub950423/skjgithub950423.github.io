@@ -236,6 +236,112 @@
             
               
                 
+                <a class="post-title-link" href="/2018/11/28/javascript逻辑运算符/" itemprop="url">
+                  javascript逻辑运算符(&&、||)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-11-28T17:18:58+08:00" content="2018-11-28">
+              2018-11-28
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2018/11/28/javascript逻辑运算符/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/11/28/javascript逻辑运算符/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>今天在学习React-native的时候官网上有这样一个例子，要把用户输入的文本替换为🍕，<br>例如输入”Hello World”将会被翻译为”🍕🍕”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style=&#123;&#123;padding: 10, fontSize: 42&#125;&#125;&gt;</span><br><span class="line">    &#123;this.state.text.split(&apos; &apos;).map((word) =&gt; word &amp;&amp; &apos;🍕&apos;).join(&apos; &apos;)&#125;</span><br><span class="line">&lt;/Text&gt;</span><br></pre></td></tr></table></figure>
+<p>关键的代码是这一段，用逻辑运算符&amp;&amp;完成了替换，这有些超出了我的认知，在这以前我一直以为逻辑运算符是这样用的:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="literal">true</span>||<span class="literal">false</span>);    <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">false</span>||<span class="literal">true</span>);    <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">true</span>||<span class="literal">true</span>);        <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">false</span>||<span class="literal">false</span>);    <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">true</span>&amp;&amp;<span class="literal">false</span>);    <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">true</span>&amp;&amp;<span class="literal">true</span>);    <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">false</span>&amp;&amp;<span class="literal">false</span>);    <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">false</span>&amp;&amp;<span class="literal">true</span>);    <span class="comment">// false</span></span><br></pre></td></tr></table></figure></p>
+<p>“||”只要有一边为true则为true，而”&amp;&amp;”只要有一边为false则为false,这是两边为布尔值的情况下，那么其他情况下呢，为此我查找了一些资料并进行了实验<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/11/28/javascript逻辑运算符/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </p></div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2018/11/20/git并行开发项目_下/" itemprop="url">
                   git项目合并
                 </a>
@@ -891,7 +997,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

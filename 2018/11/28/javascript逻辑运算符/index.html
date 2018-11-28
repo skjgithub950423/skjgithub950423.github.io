@@ -1,0 +1,603 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="javascript,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1">
+
+
+
+
+
+
+<meta name="description" content="今天在学习React-native的时候官网上有这样一个例子，要把用户输入的文本替换为🍕，例如输入”Hello World”将会被翻译为”🍕🍕” 123&amp;lt;Text style=&amp;#123;&amp;#123;padding: 10, fontSize: 42&amp;#125;&amp;#125;&amp;gt;    &amp;#123;this.state.text.split(&amp;apos; &amp;apos;).map((w">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript逻辑运算符(&amp;&amp;、||)">
+<meta property="og:url" content="http://yoursite.com/2018/11/28/javascript逻辑运算符/index.html">
+<meta property="og:site_name" content="Song-FE">
+<meta property="og:description" content="今天在学习React-native的时候官网上有这样一个例子，要把用户输入的文本替换为🍕，例如输入”Hello World”将会被翻译为”🍕🍕” 123&amp;lt;Text style=&amp;#123;&amp;#123;padding: 10, fontSize: 42&amp;#125;&amp;#125;&amp;gt;    &amp;#123;this.state.text.split(&amp;apos; &amp;apos;).map((w">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-28T11:28:31.391Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript逻辑运算符(&amp;&amp;、||)">
+<meta name="twitter:description" content="今天在学习React-native的时候官网上有这样一个例子，要把用户输入的文本替换为🍕，例如输入”Hello World”将会被翻译为”🍕🍕” 123&amp;lt;Text style=&amp;#123;&amp;#123;padding: 10, fontSize: 42&amp;#125;&amp;#125;&amp;gt;    &amp;#123;this.state.text.split(&amp;apos; &amp;apos;).map((w">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/11/28/javascript逻辑运算符/">
+
+  <title> javascript逻辑运算符(&&、||) | Song-FE </title>
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Song-FE</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                javascript逻辑运算符(&&、||)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-11-28T17:18:58+08:00" content="2018-11-28">
+              2018-11-28
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2018/11/28/javascript逻辑运算符/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/11/28/javascript逻辑运算符/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>今天在学习React-native的时候官网上有这样一个例子，要把用户输入的文本替换为🍕，<br>例如输入”Hello World”将会被翻译为”🍕🍕”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style=&#123;&#123;padding: 10, fontSize: 42&#125;&#125;&gt;</span><br><span class="line">    &#123;this.state.text.split(&apos; &apos;).map((word) =&gt; word &amp;&amp; &apos;🍕&apos;).join(&apos; &apos;)&#125;</span><br><span class="line">&lt;/Text&gt;</span><br></pre></td></tr></table></figure>
+<p>关键的代码是这一段，用逻辑运算符&amp;&amp;完成了替换，这有些超出了我的认知，在这以前我一直以为逻辑运算符是这样用的:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="literal">true</span>||<span class="literal">false</span>);    <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">false</span>||<span class="literal">true</span>);    <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">true</span>||<span class="literal">true</span>);        <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">false</span>||<span class="literal">false</span>);    <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">true</span>&amp;&amp;<span class="literal">false</span>);    <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">true</span>&amp;&amp;<span class="literal">true</span>);    <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">false</span>&amp;&amp;<span class="literal">false</span>);    <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">false</span>&amp;&amp;<span class="literal">true</span>);    <span class="comment">// false</span></span><br></pre></td></tr></table></figure></p>
+<p>“||”只要有一边为true则为true，而”&amp;&amp;”只要有一边为false则为false,这是两边为布尔值的情况下，那么其他情况下呢，为此我查找了一些资料并进行了实验<br><a id="more"></a></p>
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><h4 id="“-amp-amp-”-逻辑与"><a href="#“-amp-amp-”-逻辑与" class="headerlink" title="“&amp;&amp;”(逻辑与)"></a>“&amp;&amp;”(逻辑与)</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">val1&amp;&amp;val2</span><br></pre></td></tr></table></figure>
+<p>如果val1 能转换成false则返回val1，否则返回val2。因此，与布尔值一起使用时，如果两个操作数都为true时&amp;&amp;返回true，否则返回false。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">0</span>&amp;&amp;<span class="number">1</span>); <span class="comment">//0</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">2</span>&amp;&amp;<span class="number">1</span>); <span class="comment">//1</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'a'</span>&amp;&amp;<span class="number">1</span>) <span class="comment">//'a'</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'a'</span>&amp;&amp;<span class="number">0</span>) <span class="comment">//0</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'a'</span>&amp;&amp;<span class="string">'b'</span>) <span class="comment">//'b'</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">''</span>&amp;&amp;<span class="number">1</span>); <span class="comment">//''</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">''</span>&amp;&amp;<span class="literal">true</span>); <span class="comment">//''</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="“-”-逻辑或"><a href="#“-”-逻辑或" class="headerlink" title="“||”(逻辑或)"></a>“||”(逻辑或)</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">val1||val2</span><br></pre></td></tr></table></figure>
+<p>如果val1能转换成true则返回val1，否则返回val2。因此，与布尔值一起使用时，如果任意一个操作数为true时||返回true。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">0</span>||<span class="number">1</span>); <span class="comment">//1</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">2</span>||<span class="number">1</span>); <span class="comment">//2</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'a'</span>||<span class="number">1</span>); <span class="comment">//'a'</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'a'</span>||<span class="number">0</span>); <span class="comment">//'a'</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'a'</span>||<span class="string">'b'</span>) <span class="comment">//'a'</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">''</span>||<span class="number">1</span>); <span class="comment">//1</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">''</span>||<span class="literal">true</span>); <span class="comment">//true</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="能转换为false的表达式"><a href="#能转换为false的表达式" class="headerlink" title="能转换为false的表达式"></a>能转换为false的表达式</h3><ul>
+<li>null</li>
+<li>NaN</li>
+<li>0</li>
+<li>空字符串（””）</li>
+<li>undefined</li>
+</ul>
+<h3 id="备注-关于-amp-amp-与-的优先级"><a href="#备注-关于-amp-amp-与-的优先级" class="headerlink" title="备注(关于&amp;&amp;与||的优先级)"></a>备注(关于&amp;&amp;与||的优先级)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="literal">false</span>||<span class="literal">true</span>&amp;&amp;<span class="literal">true</span>);  <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+<p>证明“&amp;&amp;”的优先级要高于“||”？我也不太确定，但是看结果是这样的</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/20/git并行开发项目_下/" rel="next" title="git项目合并">
+                <i class="fa fa-chevron-left"></i> git项目合并
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2018/11/28/javascript逻辑运算符/" data-title="javascript逻辑运算符(&&、||)" data-url="http://yoursite.com/2018/11/28/javascript逻辑运算符/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="Song">
+          <p class="site-author-name" itemprop="name">Song</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑运算符"><span class="nav-number">1.</span> <span class="nav-text">逻辑运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#“-amp-amp-”-逻辑与"><span class="nav-number">1.1.</span> <span class="nav-text">“&amp;&amp;”(逻辑与)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#“-”-逻辑或"><span class="nav-number">1.2.</span> <span class="nav-text">“||”(逻辑或)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#能转换为false的表达式"><span class="nav-number">2.</span> <span class="nav-text">能转换为false的表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#备注-关于-amp-amp-与-的优先级"><span class="nav-number">3.</span> <span class="nav-text">备注(关于&amp;&amp;与||的优先级)</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Song</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"SongKai"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/love.js"></script>
+  <script type="text/javascript" src="/js/src/particle.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>
