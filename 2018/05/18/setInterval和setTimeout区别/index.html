@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="other,">
+  <meta name="keywords" content="javascript,">
 
 
 
@@ -84,18 +84,18 @@
 
 
 
-<meta name="description" content="ssh有密码登录和证书登陆，这里只讨论证书登陆 证书登陆步骤1.生成公钥和私钥，私钥存放在客户端 1ssh-keygen -t rsa //生成证书 2.把客户端生成的公钥上传到需要登陆的服务器上">
-<meta name="keywords" content="other">
+<meta name="description" content="最近做项目的时候遇到了一个很常见的需求，倒计时，在实现方式上主要有两种，setInterval和setTimeout，那么他们到底有什么区别呢 setTimeout用法1setTimeout(cb,time) setTimeout传入的是两个参数，第一个参数是cb代表的是回调函数callback，第二个代表的是时间，以ms计算,具体的表现就是在time时间之后执行回调函数callback（call">
+<meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ssh公钥私钥认证原理">
-<meta property="og:url" content="http://yoursite.com/2019/02/18/ssh公钥私钥认证原理/index.html">
+<meta property="og:title" content="setInterval和setTimeout区别">
+<meta property="og:url" content="http://yoursite.com/2018/05/18/setInterval和setTimeout区别/index.html">
 <meta property="og:site_name" content="Song-FE">
-<meta property="og:description" content="ssh有密码登录和证书登陆，这里只讨论证书登陆 证书登陆步骤1.生成公钥和私钥，私钥存放在客户端 1ssh-keygen -t rsa //生成证书 2.把客户端生成的公钥上传到需要登陆的服务器上">
+<meta property="og:description" content="最近做项目的时候遇到了一个很常见的需求，倒计时，在实现方式上主要有两种，setInterval和setTimeout，那么他们到底有什么区别呢 setTimeout用法1setTimeout(cb,time) setTimeout传入的是两个参数，第一个参数是cb代表的是回调函数callback，第二个代表的是时间，以ms计算,具体的表现就是在time时间之后执行回调函数callback（call">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-18T09:28:34.352Z">
+<meta property="og:updated_time" content="2019-02-18T10:58:25.575Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ssh公钥私钥认证原理">
-<meta name="twitter:description" content="ssh有密码登录和证书登陆，这里只讨论证书登陆 证书登陆步骤1.生成公钥和私钥，私钥存放在客户端 1ssh-keygen -t rsa //生成证书 2.把客户端生成的公钥上传到需要登陆的服务器上">
+<meta name="twitter:title" content="setInterval和setTimeout区别">
+<meta name="twitter:description" content="最近做项目的时候遇到了一个很常见的需求，倒计时，在实现方式上主要有两种，setInterval和setTimeout，那么他们到底有什么区别呢 setTimeout用法1setTimeout(cb,time) setTimeout传入的是两个参数，第一个参数是cb代表的是回调函数callback，第二个代表的是时间，以ms计算,具体的表现就是在time时间之后执行回调函数callback（call">
 
 
 
@@ -116,9 +116,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/18/ssh公钥私钥认证原理/">
+  <link rel="canonical" href="http://yoursite.com/2018/05/18/setInterval和setTimeout区别/">
 
-  <title> ssh公钥私钥认证原理 | Song-FE </title>
+  <title> setInterval和setTimeout区别 | Song-FE </title>
 </head>
 
 <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -238,7 +238,7 @@
             
             
               
-                ssh公钥私钥认证原理
+                setInterval和setTimeout区别
               
             
           </h1>
@@ -250,8 +250,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2019-02-18T17:11:48+08:00" content="2019-02-18">
-              2019-02-18
+            <time itemprop="dateCreated" datetime="2018-05-18T17:43:30+08:00" content="2018-05-18">
+              2018-05-18
             </time>
           </span>
 
@@ -261,8 +261,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2019/02/18/ssh公钥私钥认证原理/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2019/02/18/ssh公钥私钥认证原理/" itemprop="commentsCount"></span>
+                <a href="/2018/05/18/setInterval和setTimeout区别/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/05/18/setInterval和setTimeout区别/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -285,33 +285,20 @@
       
 
       
-        <p>ssh有密码登录和证书登陆，这里只讨论证书登陆</p>
-<h3 id="证书登陆步骤"><a href="#证书登陆步骤" class="headerlink" title="证书登陆步骤"></a>证书登陆步骤</h3><p>1.生成公钥和私钥，私钥存放在客户端</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa //生成证书</span><br></pre></td></tr></table></figure>
-<p>2.把客户端生成的公钥上传到需要登陆的服务器上</p>
+        <p>最近做项目的时候遇到了一个很常见的需求，倒计时，在实现方式上主要有两种，setInterval和setTimeout，那么他们到底有什么区别呢</p>
+<h3 id="setTimeout用法"><a href="#setTimeout用法" class="headerlink" title="setTimeout用法"></a>setTimeout用法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(cb,time)</span><br></pre></td></tr></table></figure>
+<p>setTimeout传入的是两个参数，第一个参数是cb代表的是回调函数callback，第二个代表的是时间，以ms计算,具体的表现就是在time时间之后执行回调函数callback（callback只会执行一次）</p>
+<h3 id="setInterval用法"><a href="#setInterval用法" class="headerlink" title="setInterval用法"></a>setInterval用法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setInterval(cb,time)</span><br></pre></td></tr></table></figure>
+<p>setInterval传入的也是两个参数，参数的含义也和上面一样，不同的是setInterval的表现是每隔time时间执行一次回调函数callback（callback会执行多次）</p>
 <a id="more"></a>
-<h3 id="认证原理"><a href="#认证原理" class="headerlink" title="认证原理"></a>认证原理</h3><p>服务器和客户端都各自拥有自己的公钥和密钥。为了说明方便，以下将使用这些符号。</p>
-<p>Ac 客户端公钥</p>
-<p>Bc 客户端密钥</p>
-<p>As 服务器公钥</p>
-<p>Bs 服务器密钥</p>
-<p>在认证之前，客户端需要通过某种方法将公钥 Ac 登录到服务器上。</p>
-<p>认证过程分为两个步骤：</p>
-<p>1 会话密钥(session key)生成</p>
-<p>客户端请求连接服务器，服务器将 As 发送给客户端。</p>
-<p>服务器生成会话ID(session id)，设为 p，发送给客户端。</p>
-<p>客户端生成会话密钥(session key)，设为 q，并计算 r = p xor q。</p>
-<p>客户端将 r 用 As 进行加密，结果发送给服务器。</p>
-<p>服务器用 Bs 进行解密，获得 r。</p>
-<p>服务器进行 r xor p 的运算，获得 q。</p>
-<p>至此服务器和客户端都知道了会话密钥q，以后的传输都将被 q 加密。</p>
-<p>2 认证</p>
-<p>服务器生成随机数 x，并用 Ac 加密后生成结果 S(x)，发送给客户端</p>
-<p>客户端使用 Bc 解密 S(x) 得到 x</p>
-<p>客户端计算 q + x 的 md5 值 n(q+x)，q为上一步得到的会话密钥</p>
-<p>服务器计算 q + x 的 md5 值 m(q+x)</p>
-<p>客户端将 n(q+x) 发送给服务器</p>
-<p>服务器比较 m(q+x) 和 n(q+x)，两者相同则认证成功</p>
+<h3 id="setInterval和setTimout的转换"><a href="#setInterval和setTimout的转换" class="headerlink" title="setInterval和setTimout的转换"></a>setInterval和setTimout的转换</h3><p>大多数情况下，他们两兄弟都是可以通用的，可以互相转换，例如</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">run</span></span>() &#123;</span><br><span class="line">    setTimeout(() =&gt; &#123;</span><br><span class="line">        console.log(1);</span><br><span class="line">        run()</span><br><span class="line">    &#125;,10000)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">run</span></span>()&#123;</span><br><span class="line">    setInterval(()=&gt;&#123;</span><br><span class="line">        console.log(1);</span><br><span class="line">    &#125;,10000)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h3><p>1.cb执行时间 &lt; time<br>这种情况下一切都是正常的，两个方法没有任何区别</p>
+<p>2.cb执行时间 &gt; time</p>
+<p>setTimeout:总的执行时间 = cb的执行时间 + time<br>也就是说，如果cb执行时间是10秒，time是1秒，那么总的执行时间就是11秒，如果递归调用，那么下一次的执行就会延迟到11秒</p>
+<p>setInterval还要再细分两种情况:<br>1.cb执行时间大于一个执行周期（time）并且小于两个执行周期（time），那么就会立即触发第二个周期的回调函数<br>2.cb执行时间远大于执行周期，那么就会跳过中间周期的回调函数，直接执行所处周期的回调函数</p>
+<h3 id="倒计时的应用"><a href="#倒计时的应用" class="headerlink" title="倒计时的应用"></a>倒计时的应用</h3><p>如果只是简单的倒计时，那么用两种方法都可以，如果倒计时的同时还会进行其他复杂的运算，运算时间可能会超过一秒，就要进行权衡了，是保证每一次倒计时回调函数函数的执行，但是会造成时间上的延迟，还是保证时间准确，但是可能会跳过一些函数的执行</p>
+<p>注：此处的准确并不是完全的准确，还是会存在一定的误差，需要自己对时间进行校准</p>
 
       
     </div>
@@ -334,7 +321,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/other/" rel="tag">#other</a>
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
           
         </div>
       
@@ -343,13 +330,17 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/21/ant-design-react-native自定义主题/" rel="next" title="@ant-design/react-native自定义主题">
-                <i class="fa fa-chevron-left"></i> @ant-design/react-native自定义主题
+              <a href="/2016/09/24/有关声明的一些小问题/" rel="next" title="有关声明的一些小问题">
+                <i class="fa fa-chevron-left"></i> 有关声明的一些小问题
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/21/git-flow工作流/" rel="prev" title="git-flow工作流">
+                git-flow工作流 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -375,7 +366,7 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2019/02/18/ssh公钥私钥认证原理/" data-title="ssh公钥私钥认证原理" data-url="http://yoursite.com/2019/02/18/ssh公钥私钥认证原理/">
+      <div class="ds-thread" data-thread-key="2018/05/18/setInterval和setTimeout区别/" data-title="setInterval和setTimeout区别" data-url="http://yoursite.com/2018/05/18/setInterval和setTimeout区别/">
       </div>
     
   </div>
@@ -457,7 +448,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#证书登陆步骤"><span class="nav-number">1.</span> <span class="nav-text">证书登陆步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#认证原理"><span class="nav-number">2.</span> <span class="nav-text">认证原理</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#setTimeout用法"><span class="nav-number">1.</span> <span class="nav-text">setTimeout用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#setInterval用法"><span class="nav-number">2.</span> <span class="nav-text">setInterval用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#setInterval和setTimout的转换"><span class="nav-number">3.</span> <span class="nav-text">setInterval和setTimout的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊情况"><span class="nav-number">4.</span> <span class="nav-text">特殊情况</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#倒计时的应用"><span class="nav-number">5.</span> <span class="nav-text">倒计时的应用</span></a></li></ol></div>
             
           </div>
         </section>

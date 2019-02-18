@@ -1011,6 +1011,113 @@
             
               
                 
+                <a class="post-title-link" href="/2018/05/18/setInterval和setTimeout区别/" itemprop="url">
+                  setInterval和setTimeout区别
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-05-18T17:43:30+08:00" content="2018-05-18">
+              2018-05-18
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2018/05/18/setInterval和setTimeout区别/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/05/18/setInterval和setTimeout区别/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>最近做项目的时候遇到了一个很常见的需求，倒计时，在实现方式上主要有两种，setInterval和setTimeout，那么他们到底有什么区别呢</p>
+<h3 id="setTimeout用法"><a href="#setTimeout用法" class="headerlink" title="setTimeout用法"></a>setTimeout用法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(cb,time)</span><br></pre></td></tr></table></figure>
+<p>setTimeout传入的是两个参数，第一个参数是cb代表的是回调函数callback，第二个代表的是时间，以ms计算,具体的表现就是在time时间之后执行回调函数callback（callback只会执行一次）</p>
+<h3 id="setInterval用法"><a href="#setInterval用法" class="headerlink" title="setInterval用法"></a>setInterval用法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setInterval(cb,time)</span><br></pre></td></tr></table></figure>
+<p>setInterval传入的也是两个参数，参数的含义也和上面一样，不同的是setInterval的表现是每隔time时间执行一次回调函数callback（callback会执行多次）</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/05/18/setInterval和setTimeout区别/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/24/有关声明的一些小问题/" itemprop="url">
                   有关声明的一些小问题
                 </a>
@@ -1201,114 +1308,13 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/22/闭包/" itemprop="url">
-                  闭包
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-22T09:39:24+08:00" content="2016-09-22">
-              2016-09-22
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/22/闭包/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/22/闭包/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>闭包是Javascript的一个难点，听起来很高大上，可能你之前之听过闭包，但并不知道这到底是个什么东西，其实在我们平常编写的代码中，闭包无处不在。<br>以下是我学习闭包的一些心得，希望能对渴望理解闭包的你有一些小小的帮助。</p>
-<h2 id="变量的作用域"><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a>变量的作用域</h2><p>理解闭包首先需要了解的就是变量的作用域。<br>变量的作用域分为两种：局部变量和全局变量。<br>在Javascript中函数内部可以直接读取全局变量，而在函数外部不能读取函数的局部变量。</p>
-<h3 id="函数内部读取全局变量"><a href="#函数内部读取全局变量" class="headerlink" title="函数内部读取全局变量"></a>函数内部读取全局变量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a = 111;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">f1</span></span>()&#123;</span><br><span class="line">	alert(a);</span><br><span class="line">&#125;</span><br><span class="line">f1(); //111</span><br></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/09/22/闭包/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1345,7 +1351,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
