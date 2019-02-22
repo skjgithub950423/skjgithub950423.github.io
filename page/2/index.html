@@ -236,6 +236,113 @@
             
               
                 
+                <a class="post-title-link" href="/2016/09/23/javascript作用域与作用域链/" itemprop="url">
+                  javascript作用域与作用域链
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-23T21:52:53+08:00" content="2016-09-23">
+              2016-09-23
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/23/javascript作用域与作用域链/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/23/javascript作用域与作用域链/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="JavaScript作用域概要"><a href="#JavaScript作用域概要" class="headerlink" title="JavaScript作用域概要"></a>JavaScript作用域概要</h2><p>作用域就是变量与函数的可访问范围，即作用域控制着变量与函数的可见性和生命周期。而在JavaScript中，作用域有三种类型：全局作用域、局部作用域、eval作用域。</p>
+<h3 id="全局作用域"><a href="#全局作用域" class="headerlink" title="全局作用域"></a>全局作用域</h3><p>在全局作用域内定义的变量从任何地方都可以访问。因为他是作用域链中的最高层/最后一个。</p>
+<p>最外层函数和在最外层定义的变量拥有全局作用域</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> str1 = <span class="string">"a"</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">fn2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(str1);</span><br><span class="line">    &#125;</span><br><span class="line">    fn2();</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(num);     <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">console</span>.log(str1);    <span class="comment">// 抛出错误</span></span><br><span class="line">fn1();    <span class="comment">// "a"</span></span><br><span class="line">fn2();    <span class="comment">// 抛出错误</span></span><br></pre></td></tr></table></figure>
+<p>所有未定义直接赋值的变量自动声明为拥有全局作用域<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/23/javascript作用域与作用域链/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </p></div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/22/闭包/" itemprop="url">
                   闭包
                 </a>
@@ -363,7 +470,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
