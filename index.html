@@ -286,20 +286,16 @@
 
       
         
-          
-            <h2 id="基础知识部分"><a href="#基础知识部分" class="headerlink" title="基础知识部分"></a>基础知识部分</h2><p>众所周知，js中的数据类型可以分为两大类型：基本类型和对象</p>
+          <h2 id="基础知识部分"><a href="#基础知识部分" class="headerlink" title="基础知识部分"></a>基础知识部分</h2><p>众所周知，js中的数据类型可以分为两大类型：基本类型和对象</p>
 <p>基本类型有六种： null，undefined，boolean，number，string，symbol</p>
-<p>其余的例如：array,object等都属于对象</p>
+<p>其余的例如：array,object等都属于引用类型的值</p>
 <p>对于基本类型的复制，是直接在内存中开辟一块新的空间，然后把当前值复制一份过去</p>
-<p>然而对于对象，复制的方式和基本类型是不同的，在复制的时候并不是把整个对象直接复制过去，而是仅仅复制指向当前对象内存地址的指针</p>
-<p>看图说话：</p>
-<p>复制基本类型的值</p>
-<p><img src="https://images2018.cnblogs.com/blog/1472147/201809/1472147-20180901174310515-2122788467.png" alt="复制基本类型"></p>
-<p><img src="/.com//clone_2.png" alt="复制基本类型"></p>
-<p>复制对象</p>
-<p><img src="/.com//clone_3.png" alt="复制对象"></p>
-
-          
+<p>然而对于引用类型的值，复制的方式和基本类型是不同的，在复制的时候并不是把整个对象直接复制过去，而是仅仅复制指向当前对象内存地址的指针</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2019/07/26/js对象的拷贝/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -748,7 +744,7 @@
           <p>今天在学习React-native的时候官网上有这样一个例子，要把用户输入的文本替换为🍕，<br>例如输入”Hello World”将会被翻译为”🍕🍕”</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;Text style=&#123;&#123;padding: 10, fontSize: 42&#125;&#125;&gt;</span><br><span class="line">    &#123;this.state.text.split(&apos; &apos;).map((word) =&gt; word &amp;&amp; &apos;🍕&apos;).join(&apos; &apos;)&#125;</span><br><span class="line">&lt;/Text&gt;</span><br></pre></td></tr></table></figure>
 <p>关键的代码是这一段，用逻辑运算符&amp;&amp;完成了替换，这有些超出了我的认知，在这以前我一直以为逻辑运算符是这样用的:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="literal">true</span>||<span class="literal">false</span>);    <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">false</span>||<span class="literal">true</span>);    <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">true</span>||<span class="literal">true</span>);        <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">false</span>||<span class="literal">false</span>);    <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">true</span>&amp;&amp;<span class="literal">false</span>);    <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">true</span>&amp;&amp;<span class="literal">true</span>);    <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">false</span>&amp;&amp;<span class="literal">false</span>);    <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">false</span>&amp;&amp;<span class="literal">true</span>);    <span class="comment">// false</span></span><br></pre></td></tr></table></figure></p>
-<p>“||”只要有一边为true则为true，而”&amp;&amp;”只要有一边为false则为false,这是两边为布尔值的情况下，那么其他情况下呢，为此我查找了一些资料并进行了实验<br>
+<p>“||”只要有一边为true则为true，而”&amp;&amp;”只要有一边为false则为false,这是两边为布尔值的情况下，那么其他情况下呢，为此我查找了一些资料并进行了实验<br></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2018/11/28/javascript逻辑运算符/#more" rel="contents">
               阅读全文 &raquo;
@@ -756,7 +752,7 @@
           </div>
         
       
-    </p></div>
+    </div>
 
     <div>
       
@@ -1069,7 +1065,7 @@
 <li>master</li>
 <li>devolop</li>
 </ul>
-<p>这两个分支会存活在整个项目的生命周期中<br>
+<p>这两个分支会存活在整个项目的生命周期中<br></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2018/10/21/git-flow工作流/#more" rel="contents">
               阅读全文 &raquo;
@@ -1077,7 +1073,7 @@
           </div>
         
       
-    </p></div>
+    </div>
 
     <div>
       
